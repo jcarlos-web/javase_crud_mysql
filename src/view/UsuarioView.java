@@ -321,7 +321,6 @@ public class UsuarioView extends JFrame {
 			);
 			
 			jtable = new JTable();
-			jtable.setFillsViewportHeight(true);
 			jtable.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 			jtable.setShowVerticalLines(false);
 			jtable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
@@ -329,8 +328,7 @@ public class UsuarioView extends JFrame {
 				@Override
 				public void mousePressed(MouseEvent arg0) {
 					
-					// Habilitamos btn
-					btnEliminar.setEnabled(true);
+					
 					
 					// Idicamos GATE= UPDATE
 					gate = "UPDATE";
@@ -354,6 +352,9 @@ public class UsuarioView extends JFrame {
 					txtEmail.setText(jtable.getValueAt(row, 4).toString());
 					txtTelefono.setText(jtable.getValueAt(row, 5).toString());
 					txtFecha.setText(jtable.getValueAt(row, 6).toString());
+					
+					// Habilitamos btn
+					btnEliminar.setEnabled(true);
 
 				}
 			});
